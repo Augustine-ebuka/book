@@ -1,11 +1,19 @@
-
 import './App.css'
+import {Routes,Route} from 'react-router-dom'
+import Register from './pages/register'
+import Login from './pages/login'
+import Verify from './pages/verify'
 
 function App() {
 
   return (
     <>
-        <h1 className='text-red p-8'>hello workd</h1>
+        <Routes>
+          <Route path='/' element/>
+          <Route path='/register' element={<Register />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/verify' element={<Verify />}/>
+        </Routes>
     </>
   )
 }
