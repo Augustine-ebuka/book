@@ -46,7 +46,7 @@ class Authentication extends Controller{
                 'status' => true,
                 'message' => 'User Created Successfully',
                 'token' => $user->createToken('tokenebneuuah373')->plainTextToken
-            ], 200);
+            ], 201);
 
         } catch (\Throwable $th) {
             return response()->json([
@@ -71,7 +71,7 @@ class Authentication extends Controller{
                     'status' => false,
                     'message' => 'validation error',
                     'errors' => $validateUser->errors()
-                ], 401);
+                ], 403);
             }
 
             if(!Auth::attempt($request->only(['email', 'password']))){
@@ -138,8 +138,6 @@ class Authentication extends Controller{
         else{
             return response()->json(['message' => 'user not authenticated'], 401);
         }
-
-
     }
 
     // logout

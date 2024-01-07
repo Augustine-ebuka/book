@@ -17,10 +17,12 @@ Route::get('/logout', [Authentication::class, 'logout']);
 // })->name('login');
 
 
-Route::get('/profile',[Authentication::class, 'profile'])->middleware('auth');
-Route::get('/book/search',[BookSearchController::class, 'searchBooks'] )->middleware('auth:api');
+
+// Route::get('/book/search',[BookSearchController::class, 'searchBooks'] )->middleware('auth:api');
+Route::middleware('auth:sanctum')->get('/profile',[Authentication::class, 'profile'] );
+Route::middleware('auth:sanctum')->get('/book/search',[BookSearchController::class, 'searchBooks'] );
 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
