@@ -146,4 +146,20 @@ class Authentication extends Controller{
         Auth::logout();
         return response()->json(['message' => 'logout successful'], 200);
     }
+
+    // public function checklogin()
+    // {
+    //     if (Auth::check()) {
+    //         $user = Auth::user();
+    //         return response()->json([
+    //             'status' => true,
+    //             'message' => 'User Created Successfully',
+    //             'token' => $user->createToken('tokenebneuuah373')->plainTextToken
+    //         ], 201);
+
+    //     } else {
+    //         return response()->json(['error' => 'not logged in'], 401);
+    //     }
+    // }
+    
 }

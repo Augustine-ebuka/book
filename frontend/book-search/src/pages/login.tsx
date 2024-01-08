@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, CSSProperties} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ClipLoader from "react-spinners/ClipLoader";
+import { useAuth } from '../context/userContext';
 
 interface LoginProps {}
 
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "blue",
+  color: ''
+};
+ 
+
 const Login: React.FC<LoginProps> = () => {
+  const { loginUser } = useAuth();
+  const [loading, setIsloading] = useState<boolean | undefined>(false)
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -19,11 +31,15 @@ const Login: React.FC<LoginProps> = () => {
     if (!validateForm()) {
       return;
     }
+    setIsloading(true)
 
     const api = 'http://localhost:8000/api/login';
     try {
       const result = await axios.post(api, formData);
       if (result.status === 200) {
+        const { token } = result.data;
+        localStorage.setItem('authToken', token);
+        loginUser()
         toast.success('Login success');
 
         setTimeout(() => {
@@ -50,6 +66,10 @@ const Login: React.FC<LoginProps> = () => {
           break;
       }
       console.error('API call error:', error);
+    }
+    finally{
+      setIsloading(false)
+      console.log('i am done regardless')
     }
   };
 
@@ -78,6 +98,13 @@ const Login: React.FC<LoginProps> = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Login
             </h1>
+            <ClipLoader
+             loading={loading}
+              cssOverride={override}
+              size={50}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
             <form className="space-y-4 md:space-y-6" action="#" onSubmit={login}>
               {/* email address */}
               <div>
