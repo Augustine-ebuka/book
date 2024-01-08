@@ -15,7 +15,7 @@ export default {
       backgroundImage: {
         'hero-pattern': "",
       },
-      fontFamily: {
+      fontFamily:  {
         'primary': ['Poppins']
       }, //end of fontFamily
       
