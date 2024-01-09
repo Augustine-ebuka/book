@@ -1,6 +1,6 @@
 # Book Search Project - Laravel Sanctum Authentication with Typescript React JS
 
-Welcome to the Book Search Project! This project combines the robust features of Laravel 10 with the dynamic capabilities of Typescript React JS, leveraging Laravel Sanctum for secure and flexible authentication. The application utilizes both stateful and stateless request handling, providing a comprehensive authentication mechanism.
+Welcome to the Book Search Project! This project allow a user to search for their favorite book by name or they can search for all the book available in the third party api, the result is displayed in a nicely formated cards. This project combines the robust features of Laravel 10 with the dynamic capabilities of Typescript React JS, leveraging Laravel Sanctum for secure and flexible authentication. The application utilizes both stateful and stateless request handling, providing a comprehensive authentication mechanism.
 
 ## Authentication Mechanism
 
@@ -9,8 +9,11 @@ In stateful requests, the user's authentication state is stored on the server, a
 ## Key Features of the Backend
 
 - **Laravel 10**: The backend is built on Laravel 10, a powerful PHP framework known for its elegance and developer-friendly syntax.
-- **Laravel Sanctum**: The project employs Laravel Sanctum for user authentication. Sanctum provides a simple and effective way to implement Single Page Application (SPA) authentication.
+- **Laravel Sanctum**: The project employs Laravel Sanctum for user authentication. Sanctum provides a simple and effective way to implement Single Page Application (SPA) authentication and ensure scalability when request increase.
 - **Private Route**: this ensure security in the frontend end to ensure that an unauthenticated users does not have access to our secured page. it will return them back to login.
+- **A well written test of the features**: 
+- **user input valiadation and sanitation** error code related to user error was also implemented: 
+- **Maintain security of Env. variables** error code related to user error was also implemented: 
 
 ## Key Features of the Frontend
 
@@ -36,6 +39,8 @@ In stateful requests, the user's authentication state is stored on the server, a
 - The application is designed to be responsive, ensuring a consistent user experience across different devices.
 
 ### 6 React Typescript**: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
+### 7 Nice looking interface **: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
+### 8 Caching system **: This allow to reduce overhead or bottleneck in the request. when a user want to search an already fetched data, the system utilize the power of localstorage
 
 ## Note
 - i have not implemented the the Phone number verification due to unavailability of free API that offer phone number verification.(sendchimp and other API plateform are paid)
