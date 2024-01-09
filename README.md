@@ -38,7 +38,7 @@ In stateful requests, the user's authentication state is stored on the server, a
 ### 6 React Typescript**: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
 
 ## Note
-- i have not implemented the the Phone number verification though unavailability of free API that offer phone number verification. 
+- i have not implemented the the Phone number verification due to unavailability of free API that offer phone number verification.(sendchimp and other API plateform are paid)
 
    
 
