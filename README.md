@@ -41,6 +41,9 @@ In stateful requests, the user's authentication state is stored on the server, a
 - i have not implemented the the Phone number verification due to unavailability of free API that offer phone number verification.(sendchimp and other API plateform are paid)
 
    
+![passnotcorrect](https://github.com/Augustine-ebuka/book/assets/78606987/ec6e403b-60be-40f6-a47c-d9e6fdc0e570)
 
+![userexist](https://github.com/Augustine-ebuka/book/assets/78606987/746785b5-c464-486e-be0d-fd7ff49547d2)
 
+![verify](https://github.com/Augustine-ebuka/book/assets/78606987/c6bc75e8-4604-4628-86af-a21ef192b5ba)
 
