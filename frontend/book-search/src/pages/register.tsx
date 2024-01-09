@@ -61,7 +61,7 @@ const SignUp: React.FC<SignUpProps> = () => {
     } 
     catch (error:any) {
       switch (error.response.status) {
-        case 401:
+        case 422:
           toast.error("user with email already exist!");
           break;
 

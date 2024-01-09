@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BookSearchController extends Controller
 {
-
+    // find all books
     public function allBooks()
     {
         $client = new Client(['verify'=>false]);
@@ -23,6 +23,7 @@ class BookSearchController extends Controller
             }
     }
     
+    // find single book
     public function searchBooks(Request $request)
     {
         $searchQuery = $request->input('bookTitle');

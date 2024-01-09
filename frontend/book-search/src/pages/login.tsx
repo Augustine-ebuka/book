@@ -61,7 +61,7 @@ const Login: React.FC<LoginProps> = () => {
           break;
 
         case 401:
-          toast.error('Password or email cannot be empty');
+          toast.error('Password or email not correct');
           break;
 
         case 500:

@@ -11,27 +11,35 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller {
     // register a new user method
-    public function register(RegisterRequest $request) {
-
-        $data = $request->validated();
-
-        $user = User::create([
-            'firstname' => $data['firstname'],
-            'lastname' => $data['lastname'],
-            'phone' => $data['phone'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-
-        $token = $user->createToken('auth_token')->plainTextToken;
-
-        $cookie = cookie('token', $token, 60 * 24); // 1 day
-
-        return response()->json([
-            'user' => new UserResource($user),
-            'token'=> $token
-        ])->withCookie($cookie);
+    public function register(RegisterRequest $request)
+    {
+        try {
+            $data = $request->validated();
+    
+            $user = User::create([
+                'firstname' => $data['firstname'],
+                'lastname' => $data['lastname'],
+                'phone' => $data['phone'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+            ]);
+    
+            $token = $user->createToken('auth_token')->plainTextToken;
+    
+            $cookie = cookie('token', $token, 60 * 24); // 1 day its expires!
+    
+            return response()->json([
+                'user' => new UserResource($user),
+                'token' => $token,
+            ])->withCookie($cookie);
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => $e->getMessage(),
+            ], 500);
+        }
     }
+    
 
     // login a user method
     public function login(LoginRequest $request) {
