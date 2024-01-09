@@ -9,10 +9,7 @@ In stateful requests, the user's authentication state is stored on the server, a
 ## Key Features of the Backend
 
 - **Laravel 10**: The backend is built on Laravel 10, a powerful PHP framework known for its elegance and developer-friendly syntax.
-- 
-- 
 - **Laravel Sanctum**: The project employs Laravel Sanctum for user authentication. Sanctum provides a simple and effective way to implement Single Page Application (SPA) authentication.
-- 
 - **Private Route**: this ensure security in the frontend end to ensure that an unauthenticated users does not have access to our secured page. it will return them back to login.
 
 ## Key Features of the Frontend
@@ -20,7 +17,6 @@ In stateful requests, the user's authentication state is stored on the server, a
 ### 1. User Authentication
 
 - **Login:** Users can securely log in using their email and password. The application communicates with the Laravel backend to authenticate users.
-- 
 - **Registration:** New users can sign up by providing their email and creating a password.
 
 ### 2. Book Search
