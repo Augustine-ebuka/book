@@ -47,3 +47,5 @@ In stateful requests, the user's authentication state is stored on the server, a
 
 ![verify](https://github.com/Augustine-ebuka/book/assets/78606987/c6bc75e8-4604-4628-86af-a21ef192b5ba)
 
+![home](https://github.com/Augustine-ebuka/book/assets/78606987/b48a87db-bfd4-4aaf-8875-850a08969c4c)
+![single](https://github.com/Augustine-ebuka/book/assets/78606987/0c2a9d6e-c9ee-475f-873c-264f443000d9)
