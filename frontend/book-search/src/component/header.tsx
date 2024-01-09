@@ -5,8 +5,8 @@ interface text{
 }
 function Header({text}:text) {
     return ( 
-        <div className="p-2 mt-2 mb-2 bg-blue-600 border-gray-400">
-            <p className="text-white p-3 font-extrabold text-4xl text-center font-primary">{text}</p>
+        <div className="p-2 mt-2 mb-2 border-2-blue rounded-md">
+            <p className="text-blue-400 p-3 font-extrabold text-2xl text-center font-primary">{text}</p>
         </div>
      );
 }

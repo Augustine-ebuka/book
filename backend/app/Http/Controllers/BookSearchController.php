@@ -11,16 +11,14 @@ class BookSearchController extends Controller
     public function allBooks()
     {
         $client = new Client(['verify'=>false]);
-            $apiEndpoint = "https://anapioficeandfire.com/api/books";
+            $apiEndpoint = getenv("API_ENDPOINT");
 
             try {
                 $response = $client->get($apiEndpoint);
                 $books = json_decode($response->getBody(), true);
 
-                // Process and return all books
                 return response()->json(['books' => $books]);
             } catch (\Exception $e) {
-                // Handle API request errors
                 return response()->json(['error' => 'Failed to fetch data from the API'], 500);
             }
     }
@@ -30,18 +28,16 @@ class BookSearchController extends Controller
         $searchQuery = $request->input('bookTitle');
 
         if ($searchQuery) {
-            // If a search query is provided, make a request to the API
             $client = new Client(['verify'=> false]);
-            $apiEndpoint = "https://anapioficeandfire.com/api/books?name={$searchQuery}";
+            $apiEndpoint = getenv("API_ENDPOINT");
+            $query = "?name={$searchQuery}";
+            $rout = $apiEndpoint.$query;
 
             try {
-                $response = $client->get($apiEndpoint);
+                $response = $client->get($rout);
                 $books = json_decode($response->getBody(), true);
-
-                // Process and return the search results
                 return response()->json(['books' => $books]);
             } catch (\Exception $e) {
-                // Handle API request errors
                 return response()->json(['error' => 'Failed to fetch data from the API'], 500);
             }
         }

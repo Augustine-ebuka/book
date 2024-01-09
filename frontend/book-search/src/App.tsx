@@ -18,7 +18,7 @@ function App() {
           <Route path="/verify" element={<Verify />} />
           {/* Private route using PrivateRoute component */}
          <Route path='/' element={<PrivateRoute />}>
-          <Route path='/home' element={<Home />} />
+           <Route path='/home' element={<Home />} />
          </Route>
         </Routes>
       </AuthProvider>

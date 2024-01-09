@@ -34,11 +34,18 @@ const Login: React.FC<LoginProps> = () => {
     setIsloading(true)
 
     const api = 'http://localhost:8000/api/login';
+    axios.defaults.withCredentials = true;
+    const headers = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'X-Requested-With':'XMLHttpRequest',
+    };
+    
     try {
-      const result = await axios.post(api, formData);
+      const result = await axios.post(api, formData,{headers});
       if (result.status === 200) {
-        const { token } = result.data;
-        localStorage.setItem('authToken', token);
+        // const { token } = result.data;
+        // localStorage.setItem('authToken', token);
         loginUser()
         toast.success('Login success');
 

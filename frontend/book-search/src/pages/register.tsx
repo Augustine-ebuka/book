@@ -22,6 +22,10 @@ const SignUp: React.FC<SignUpProps> = () => {
   const navigate = useNavigate()
   const [loading, setIsloading] = useState<boolean | undefined>(false)
   const api = 'http://localhost:8000/api/register'
+  const headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  };
 
   const [formData, setFormData] = useState<{
     firstname: string;
@@ -46,7 +50,7 @@ const SignUp: React.FC<SignUpProps> = () => {
     }
     setIsloading(true)
     try {
-      const result = await axios.post(api, formData);
+      const result = await axios.post(api, formData,{headers});
       setTimeout(() => {
         navigate('/verify')
       }, 3000);

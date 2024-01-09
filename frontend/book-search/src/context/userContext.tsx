@@ -11,13 +11,6 @@ const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  useEffect(() => {
-    // Check for an existing token in localStorage on component mount
-    const storedToken = localStorage.getItem('authToken');
-    if (storedToken) {
-      setIsAuthenticated(true);
-    }
-  }, []);
 
   const loginUser = () => {
     // Perform authentication logic, e.g., validate credentials, set tokens, etc.
@@ -25,8 +18,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const logoutUser = () => {
-    // Perform logout logic, e.g., clear tokens, etc.
-    localStorage.removeItem('authToken');
     setIsAuthenticated(false);
   };
 
