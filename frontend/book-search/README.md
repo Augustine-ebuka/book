@@ -2,6 +2,9 @@
 ## Book Search Project - Laravel Sanctum Authentication with React JS
 ## Welcome to the Book Search Project!
 
+# Note:
+# the project is suppoesd to perform a phone number verification but because the API provided and oother APIs online are not paid, the feature wasnt implemented.
+
 # This project combines the power of Laravel 10 with React JS and leverages Laravel Sanctum for robust authentication. The application # incorporates both stateful and stateless request handling to provide a secure and flexible authentication mechanism.
 
 ## Authentication Mechanism
