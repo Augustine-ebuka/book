@@ -23,7 +23,6 @@ In stateful requests, the user's authentication state is stored on the server, a
 
 - **Search Bar:** Users can search for books using a search bar. The application sends requests to an API to fetch relevant book information.
 
-- **React Typescript**: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
 ### 3. Loading Spinner
 
 - A loading spinner is displayed during API requests to provide visual feedback to users while waiting for data.
@@ -36,6 +35,7 @@ In stateful requests, the user's authentication state is stored on the server, a
 
 - The application is designed to be responsive, ensuring a consistent user experience across different devices.
 
+### 6 React Typescript**: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
 
    
 
