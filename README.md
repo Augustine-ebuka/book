@@ -38,12 +38,15 @@ In stateful requests, the user's authentication state is stored on the server, a
 
 - The application is designed to be responsive, ensuring a consistent user experience across different devices.
 
-### 6 React Typescript**: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
-### 7 Nice looking interface **: The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
-### 8 Caching system **: This allow to reduce overhead or bottleneck in the request. when a user want to search an already fetched data, the system utilize the power of localstorage
+### 6. React Typescript**: 
+- The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
+### 7. Nice looking interface **:
+- The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
+### 8. Caching system **: 
+- This allow to reduce overhead or bottleneck in the request. when a user wants to search an already fetched data, the system utilize the power of localstorage.
 
 ## Note
-- i have not implemented the the Phone number verification due to unavailability of free API that offer phone number verification.(sendchimp and other API plateform are paid)
+- I have not implemented the the Phone number verification features due to unavailability of free API that offer phone number verification.(sendchimp and other API plateform are paid)
 
    
 ![passnotcorrect](https://github.com/Augustine-ebuka/book/assets/78606987/ec6e403b-60be-40f6-a47c-d9e6fdc0e570)
