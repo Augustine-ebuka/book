@@ -38,11 +38,11 @@ In stateful requests, the user's authentication state is stored on the server, a
 
 - The application is designed to be responsive, ensuring a consistent user experience across different devices.
 
-### 6. React Typescript**: 
+### 6. React Typescript: 
 - The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
-### 7. Nice looking interface **:
+### 7. Nice looking interface :
 - The frontend is developed using React JS with Typescript, offering a dynamic and efficient user interface.
-### 8. Caching system **: 
+### 8. Caching system : 
 - This allow to reduce overhead or bottleneck in the request. when a user wants to search an already fetched data, the system utilize the power of localstorage.
 
 ## Note
